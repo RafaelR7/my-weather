@@ -5,14 +5,14 @@ import 'package:my_weather/styles/styles.dart';
 import 'package:my_weather/weather/weather_card.dart';
 import 'package:my_weather/weather/weather_store.dart';
 
-class Home extends StatefulWidget {
-  const Home({Key key}) : super(key: key);
+class WeatherScreen extends StatefulWidget {
+  const WeatherScreen({Key key}) : super(key: key);
 
   @override
-  _HomeState createState() => _HomeState();
+  _WeatherScreenState createState() => _WeatherScreenState();
 }
 
-class _HomeState extends State<Home> {
+class _WeatherScreenState extends State<WeatherScreen> {
   final WeatherStore _weatherStore = WeatherStore();
 
   @override

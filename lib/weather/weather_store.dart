@@ -1,6 +1,6 @@
 import 'package:mobx/mobx.dart';
+import 'package:my_weather/service/weather_api.dart';
 import 'package:my_weather/weather/models/weather_model.dart';
-import 'package:my_weather/weather/weather_api.dart';
 
 part 'weather_store.g.dart';
 
