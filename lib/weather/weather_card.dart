@@ -29,11 +29,11 @@ class WeatherCard extends StatelessWidget {
             ],
           ),
         ),
-        width: 150,
+        width: 140,
         child: Column(
           children: <Widget>[
             Expanded(
-              flex: 3,
+              flex: 4,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
@@ -46,7 +46,7 @@ class WeatherCard extends StatelessWidget {
               ),
             ),
             Expanded(
-              flex: 3,
+              flex: 2,
               child: Text(
                 "$value",
                 style: Styles.mainTheme.textTheme.body2,
@@ -56,7 +56,7 @@ class WeatherCard extends StatelessWidget {
               flex: 1,
               child: Text(
                 "$type",
-                style: Styles.mainTheme.textTheme.body1,
+                style: Styles.mainTheme.textTheme.subtitle,
               ),
             ),
           ],
