@@ -85,7 +85,19 @@ class _WeatherScreenState extends State<WeatherScreen> {
                     ),
                   ],
                 )
-              : Container(),
+              : Center(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      CircularProgressIndicator(),
+                      SizedBox(height: 30),
+                      Text(
+                        "Loading...",
+                        style: TextStyle(color: Colors.white),
+                      ),
+                    ],
+                  ),
+                ),
         ),
       ),
     );
