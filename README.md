@@ -1,6 +1,9 @@
 # my_weather
 
-A new Flutter project.
+Flutter weather app.
+The app gets the user current location and consume the weatherstack API.
+-app state management MOBX
+-internacionalization ennglish and portuguese
 
 ## Getting Started
 
