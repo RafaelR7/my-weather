@@ -10,6 +10,8 @@ dependencies:
   flutter:
     sdk: flutter
   cupertino_icons: ^0.1.2
+  flutter_localizations:
+    sdk: flutter
   flutter_mobx: ^1.1.0
   font_awesome_flutter: ^8.8.1
   google_fonts: ^1.0.0

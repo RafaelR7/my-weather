@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:my_weather/i18n/i18n.dart';
 import 'package:my_weather/styles/styles.dart';
 import 'package:my_weather/weather/weather_card.dart';
 import 'package:my_weather/weather/weather_store.dart';
@@ -46,11 +47,24 @@ class _WeatherScreenState extends State<WeatherScreen> {
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
-                          temperature(),
+                          Text(
+                            "${_weatherStore.weather.temperature}°",
+                            style: Styles.mainTheme.textTheme.title,
+                          ),
                           SizedBox(height: 10),
-                          description(),
+                          Text("${_weatherStore.weather.description}",
+                              style: Styles.mainTheme.textTheme.body2),
                           SizedBox(height: 10),
-                          location(),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: <Widget>[
+                              Icon(Icons.place, color: Colors.white),
+                              Text(
+                                " ${_weatherStore.weather.location}",
+                                style: Styles.mainTheme.textTheme.subtitle,
+                              )
+                            ],
+                          ),
                         ],
                       ),
                     ),
@@ -63,22 +77,22 @@ class _WeatherScreenState extends State<WeatherScreen> {
                           WeatherCard(
                             icon: FontAwesomeIcons.wind,
                             value: "${_weatherStore.weather.windSpeed}km/h",
-                            type: "Wind",
+                            type: I18n.of(context).wind,
                           ),
                           WeatherCard(
                             icon: FontAwesomeIcons.tint,
                             value: "${_weatherStore.weather.humidity}%",
-                            type: "Humidity",
+                            type: I18n.of(context).humidity,
                           ),
                           WeatherCard(
                             icon: FontAwesomeIcons.tachometerAlt,
                             value: "${_weatherStore.weather.precip}hpa",
-                            type: "Precip",
+                            type: I18n.of(context).preciptation,
                           ),
                           WeatherCard(
                             icon: FontAwesomeIcons.eye,
                             value: "${_weatherStore.weather.visibility}km",
-                            type: "Visibility",
+                            type: I18n.of(context).visibility,
                           )
                         ],
                       ),
@@ -100,31 +114,6 @@ class _WeatherScreenState extends State<WeatherScreen> {
                 ),
         ),
       ),
-    );
-  }
-
-  Widget temperature() {
-    return Text(
-      "${_weatherStore.weather.temperature}°",
-      style: Styles.mainTheme.textTheme.title,
-    );
-  }
-
-  Widget description() {
-    return Text("${_weatherStore.weather.description}",
-        style: Styles.mainTheme.textTheme.body2);
-  }
-
-  Widget location() {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: <Widget>[
-        Icon(Icons.place, color: Colors.white),
-        Text(
-          " ${_weatherStore.weather.location}",
-          style: Styles.mainTheme.textTheme.subtitle,
-        )
-      ],
     );
   }
 }

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:my_weather/i18n/i18n_delegate.dart';
 import 'package:my_weather/weather/weather_screen.dart';
 
 void main() => runApp(MyApp());
@@ -12,6 +14,15 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         textTheme: GoogleFonts.ubuntuTextTheme(),
       ),
+      localizationsDelegates: [
+        const I18nDelegate(),
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+      ],
+      supportedLocales: [
+        const Locale('en', ''),
+        const Locale('pt', ''),
+      ],
       home: WeatherScreen(),
     );
   }
