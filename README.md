@@ -2,7 +2,7 @@
 
 Flutter weather app.
 
-The app gets the user current location and makes a request to the weatherstack API.
+The app gets the user current location and make a request to the weatherstack API.
 
 -app state management: MOBX
 
