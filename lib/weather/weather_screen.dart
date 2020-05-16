@@ -49,11 +49,11 @@ class _WeatherScreenState extends State<WeatherScreen> {
                         children: <Widget>[
                           Text(
                             "${_weatherStore.weather.temperature}°",
-                            style: Styles.mainTheme.textTheme.title,
+                            style: Styles.mainTheme.textTheme.headline1,
                           ),
                           SizedBox(height: 10),
                           Text("${_weatherStore.weather.description}",
-                              style: Styles.mainTheme.textTheme.body2),
+                              style: Styles.mainTheme.textTheme.bodyText2),
                           SizedBox(height: 10),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
@@ -61,7 +61,7 @@ class _WeatherScreenState extends State<WeatherScreen> {
                               Icon(Icons.place, color: Colors.white),
                               Text(
                                 " ${_weatherStore.weather.location}",
-                                style: Styles.mainTheme.textTheme.subtitle,
+                                style: Styles.mainTheme.textTheme.subtitle1,
                               )
                             ],
                           ),

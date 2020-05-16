@@ -40,7 +40,7 @@ class WeatherCard extends StatelessWidget {
                   FaIcon(
                     icon,
                     color: Colors.white,
-                    size: 50,
+                    size: 45,
                   ),
                 ],
               ),
@@ -49,14 +49,14 @@ class WeatherCard extends StatelessWidget {
               flex: 2,
               child: Text(
                 "$value",
-                style: Styles.mainTheme.textTheme.body2,
+                style: Styles.mainTheme.textTheme.bodyText2,
               ),
             ),
             Expanded(
               flex: 1,
               child: Text(
                 "$type",
-                style: Styles.mainTheme.textTheme.subtitle,
+                style: Styles.mainTheme.textTheme.subtitle1,
               ),
             ),
           ],

@@ -3,15 +3,15 @@ import 'package:flutter/material.dart';
 class Styles {
   static ThemeData mainTheme = ThemeData.light().copyWith(
     textTheme: TextTheme(
-      title: TextStyle(
+      headline1: TextStyle(
         color: Colors.white,
         fontSize: 80,
       ),
-      subtitle: TextStyle(
+      subtitle1: TextStyle(
         color: Colors.white,
         fontSize: 20,
       ),
-      body2: TextStyle(
+      bodyText2: TextStyle(
         color: Colors.white,
         fontSize: 25,
       ),
