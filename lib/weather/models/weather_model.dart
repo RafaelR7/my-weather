@@ -7,7 +7,7 @@ class Weather {
   final int humidity;
   final int windSpeed;
   final int visibility;
-  final int precip;
+  final double precip;
 
   Weather({
     @required this.location,
@@ -27,7 +27,7 @@ class Weather {
       humidity: json['current']['humidity'] as int,
       windSpeed: json['current']['wind_speed'] as int,
       visibility: json['current']['visibility'] as int,
-      precip: json['current']['precip'] as int,
+      precip: json['current']['precip'] as double,
     );
   }
 
