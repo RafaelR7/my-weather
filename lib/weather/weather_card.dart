@@ -21,12 +21,9 @@ class WeatherCard extends StatelessWidget {
       child: Container(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(15.0),
-          gradient: RadialGradient(
-            radius: 1.0,
-            colors: [
-              Colors.lightBlue[700],
-              Colors.lightBlue[900],
-            ],
+          border: Border.all(
+            color: Colors.white,
+            width: 2,
           ),
         ),
         width: 140,
