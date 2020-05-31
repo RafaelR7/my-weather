@@ -4,7 +4,7 @@ Flutter weather app.
 
 Display the weather of the user current location.
 
-#### Feature
+#### Features
 - MOBX
 - Weatherstack API request
 - internationalization: english and portuguese
