@@ -2,7 +2,7 @@
 
 Flutter weather app.
 
-Display the weather of the user current location.
+Weather of user current location.
 
 #### Features
 - MOBX
